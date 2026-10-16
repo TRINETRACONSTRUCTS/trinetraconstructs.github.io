@@ -1,19 +1,14 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Trinetra Constructs | Architecture & Construction in Jammu</title>
-
-  <meta name="description" content="Trinetra Constructs provides architectural design, engineering, residential and commercial construction, turnkey projects and renovation services in Jammu, Akhnoor, Udhampur and Katra.">
-
   <meta name="theme-color" content="#0B1930">
+  <meta name="description" content="Trinetra Constructs provides architecture, engineering, residential and commercial construction, turnkey projects and renovation services in Jammu, Akhnoor, Udhampur and Katra.">
+  <title>Trinetra Constructs | Architecture & Construction in Jammu</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
@@ -261,10 +256,12 @@
       display: flex;
       align-items: center;
       background:
-        linear-gradient(90deg,
+        linear-gradient(
+          90deg,
           rgba(5,17,34,.94) 0%,
           rgba(5,17,34,.80) 47%,
-          rgba(5,17,34,.28) 100%),
+          rgba(5,17,34,.28) 100%
+        ),
         url("1000412089.jpg") center 48% / cover no-repeat;
       color: var(--white);
     }
@@ -418,3 +415,814 @@
     .services-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .service-card {
+      background: var(--white);
+      padding: 34px 28px;
+      border: 1px solid rgba(11,25,48,.07);
+      transition: .3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--gold);
+      box-shadow: var(--shadow);
+    }
+
+    .service-number {
+      color: var(--gold);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 38px;
+      line-height: 1;
+      margin-bottom: 24px;
+    }
+
+    .service-card h3 {
+      font-size: 27px;
+      color: var(--blue-dark);
+      margin-bottom: 13px;
+    }
+
+    .service-card p {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.85;
+    }
+
+    .service-link {
+      display: inline-block;
+      margin-top: 22px;
+      color: var(--blue);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    /* PROJECTS */
+
+    .projects {
+      padding: 105px 0;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .project-card {
+      position: relative;
+      overflow: hidden;
+      background: var(--blue-dark);
+      min-height: 360px;
+      color: var(--white);
+    }
+
+    .project-card img {
+      position: absolute;
+      inset: 0;
+      height: 100%;
+      transition: transform .6s ease;
+    }
+
+    .project-card:hover img {
+      transform: scale(1.06);
+    }
+
+    .project-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 25px;
+      background: linear-gradient(
+        0deg,
+        rgba(5,17,34,.94) 0%,
+        rgba(5,17,34,.42) 48%,
+        transparent 100%
+      );
+    }
+
+    .project-label {
+      color: var(--gold-light);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .project-overlay h3 {
+      font-size: 29px;
+    }
+
+    .project-overlay p {
+      margin-top: 8px;
+      color: rgba(255,255,255,.8);
+      font-size: 12px;
+    }
+
+    /* GALLERY */
+
+    .gallery {
+      padding: 100px 0;
+      background: var(--ivory);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    .gallery-item {
+      overflow: hidden;
+      background: #e7eaf0;
+      height: 240px;
+    }
+
+    .gallery-item img {
+      height: 100%;
+      transition: transform .5s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.07);
+    }
+
+    .gallery-item:first-child,
+    .gallery-item:nth-child(6) {
+      grid-column: span 2;
+    }
+
+    /* APPROACH */
+
+    .approach {
+      padding: 100px 0;
+    }
+
+    .approach-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+    }
+
+    .approach-step {
+      border-top: 1px solid var(--border);
+      padding-top: 24px;
+    }
+
+    .approach-step .step-number {
+      color: var(--gold);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 2px;
+    }
+
+    .approach-step h3 {
+      margin: 12px 0;
+      font-size: 25px;
+      color: var(--blue-dark);
+    }
+
+    .approach-step p {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    /* CTA */
+
+    .cta {
+      position: relative;
+      padding: 100px 0;
+      color: var(--white);
+      background:
+        linear-gradient(rgba(8,23,44,.88), rgba(8,23,44,.91)),
+        url("1000412195.jpg") center / cover no-repeat;
+      text-align: center;
+    }
+
+    .cta h2 {
+      max-width: 760px;
+      margin: 0 auto 20px;
+    }
+
+    .cta p {
+      max-width: 650px;
+      margin: 0 auto 30px;
+      color: rgba(255,255,255,.78);
+      font-size: 14px;
+    }
+
+    .cta-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 13px;
+    }
+
+    /* CONTACT */
+
+    .contact {
+      padding: 105px 0;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 65px;
+    }
+
+    .contact-copy > p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 25px;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 0;
+    }
+
+    .contact-item {
+      padding: 18px 0;
+      border-bottom: 1px solid rgba(11,25,48,.1);
+      overflow-wrap: anywhere;
+    }
+
+    .contact-item small {
+      display: block;
+      color: var(--gold);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .contact-item a,
+    .contact-item address,
+    .contact-item span {
+      font-size: 13px;
+      color: var(--blue-dark);
+      font-style: normal;
+    }
+
+    .contact-item a:hover {
+      color: var(--gold);
+    }
+
+    .contact-form {
+      padding: 35px;
+      background: var(--ivory);
+      border: 1px solid rgba(11,25,48,.06);
+    }
+
+    .contact-form h3 {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+
+    .contact-form > p {
+      color: var(--muted);
+      font-size: 12px;
+      margin-bottom: 25px;
+    }
+
+    .form-group {
+      margin-bottom: 17px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 13px 14px;
+      border: 1px solid #dce1e8;
+      background: var(--white);
+      font-family: 'Manrope', sans-serif;
+      font-size: 13px;
+      color: var(--ink);
+      outline: none;
+      border-radius: 0;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--gold);
+    }
+
+    .form-group textarea {
+      min-height: 115px;
+      resize: vertical;
+    }
+
+    .contact-form .btn {
+      width: 100%;
+    }
+
+    .form-note {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 10px;
+      text-align: center;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: var(--blue-dark);
+      color: var(--white);
+      padding: 40px 0 25px;
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 25px;
+      flex-wrap: wrap;
+      padding-bottom: 28px;
+      border-bottom: 1px solid rgba(255,255,255,.13);
+    }
+
+    .footer-brand .brand-name {
+      color: var(--white);
+    }
+
+    .footer-brand .brand-subtitle {
+      text-align: left;
+      color: var(--gold-light);
+    }
+
+    .footer-tagline {
+      margin-top: 12px;
+      color: rgba(255,255,255,.7);
+      font-size: 10px;
+      letter-spacing: 2px;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .footer-social a {
+      color: var(--gold-light);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .footer-social a:hover {
+      color: var(--white);
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      flex-wrap: wrap;
+      padding-top: 22px;
+      color: rgba(255,255,255,.55);
+      font-size: 10px;
+    }
+
+    /* FLOATING WHATSAPP */
+
+    .whatsapp-float {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      padding: 14px 18px;
+      border-radius: 50px;
+      background: #25D366;
+      color: #062a15;
+      box-shadow: 0 8px 25px rgba(0,0,0,.2);
+      font-size: 12px;
+      font-weight: 800;
+      transition: .2s;
+    }
+
+    .whatsapp-float:hover {
+      transform: translateY(-3px);
+    }
+
+    .whatsapp-float svg {
+      width: 21px;
+      height: 21px;
+      fill: currentColor;
+    }
+
+    /* RESPONSIVE DESIGN */
+
+    @media (max-width: 1000px) {
+      .nav-links { gap: 15px; }
+      .nav-links a { font-size: 10px; }
+      .about-grid { gap: 40px; }
+      .contact-grid { gap: 35px; }
+    }
+
+    @media (max-width: 800px) {
+      .navbar { min-height: 76px; }
+      .menu-toggle { display: block; }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 76px;
+        left: 0;
+        right: 0;
+        padding: 22px 5%;
+        background: var(--white);
+        border-bottom: 1px solid var(--border);
+        box-shadow: 0 15px 30px rgba(11,25,48,.08);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+      }
+
+      .nav-links.open { display: flex; }
+      .nav-links li { border-bottom: 1px solid rgba(11,25,48,.07); }
+      .nav-links li:last-child { border-bottom: 0; padding-top: 14px; }
+      .nav-links a { display: block; padding: 13px 0; font-size: 12px; }
+      .nav-links .nav-cta { display: inline-block; padding: 12px 17px; }
+
+      .hero { min-height: 590px; }
+      .about-grid, .contact-grid { grid-template-columns: 1fr; }
+      .about-image img { height: 390px; }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .projects-grid { grid-template-columns: repeat(2, 1fr); }
+      .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+      .gallery-item { height: 200px; }
+      .approach-grid { grid-template-columns: repeat(2, 1fr); row-gap: 35px; }
+      .trust-item { padding: 22px 10px; }
+      .trust-item strong { font-size: 22px; }
+    }
+
+    @media (max-width: 520px) {
+      .container { width: 90%; }
+      .brand-name { font-size: 25px; }
+      .brand-subtitle { font-size: 8px; letter-spacing: 3px; }
+
+      .hero {
+        min-height: 600px;
+        background-position: 58% center;
+      }
+
+      .hero-content { padding: 75px 0; }
+      .hero h1 { font-size: 48px; }
+      .hero-description { font-size: 13px; }
+      .hero-actions .btn { width: 100%; }
+      .hero-location { line-height: 2; font-size: 9px; letter-spacing: 1.2px; }
+
+      .trust-grid { grid-template-columns: repeat(2, 1fr); }
+      .trust-item:nth-child(2) { border-right: 0; }
+      .trust-item:nth-child(-n+2) { border-bottom: 1px solid rgba(255,255,255,.1); }
+
+      .about, .services, .projects, .gallery, .approach, .contact {
+        padding: 75px 0;
+      }
+
+      .about-image img { height: 320px; }
+      .services-grid, .projects-grid { grid-template-columns: 1fr; }
+      .service-card { padding: 28px 24px; }
+      .project-card { min-height: 340px; }
+
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 9px; }
+      .gallery-item { height: 165px; }
+      .gallery-item:first-child, .gallery-item:nth-child(6) { grid-column: span 2; }
+
+      .approach-grid { grid-template-columns: 1fr 1fr; gap: 25px 18px; }
+      .approach-step h3 { font-size: 22px; }
+      .cta { padding: 75px 0; }
+      .cta-actions .btn { width: 100%; }
+      .contact-form { padding: 24px 18px; }
+      .footer-top, .footer-bottom { flex-direction: column; align-items: flex-start; }
+      .footer-social { gap: 14px; }
+      .whatsapp-float { right: 14px; bottom: 14px; padding: 12px 15px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container navbar">
+      <a href="#home" class="brand" aria-label="Trinetra Constructs home">
+        <span class="brand-name">TRINETRA</span>
+        <span class="brand-subtitle">CONSTRUCTS</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle"
+              aria-label="Open navigation menu"
+              aria-expanded="false"
+              aria-controls="navLinks">☰</button>
+
+      <nav aria-label="Main navigation">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a class="nav-cta" href="#contact">Start Your Project ↗</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-content">
+          <p class="eyebrow">Architecture · Engineering · Construction</p>
+          <h1>Building Your<br>Vision, <em>Precisely.</em></h1>
+          <span class="gold-line"></span>
+          <p class="hero-description">
+            From architectural planning and structural engineering to
+            construction and finishing, we help turn your vision into
+            thoughtfully designed, well-executed spaces.
+          </p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-gold">Discuss Your Project ↗</a>
+            <a href="#projects" class="btn btn-outline">Explore Our Work</a>
+          </div>
+          <p class="hero-location">
+            JAMMU &nbsp;•&nbsp; AKHNOOR &nbsp;•&nbsp; UDHAMPUR &nbsp;•&nbsp; KATRA
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST STRIP -->
+    <section class="trust-strip" aria-label="Our services at a glance">
+      <div class="container trust-grid">
+        <div class="trust-item"><strong>01</strong><span>Architecture & Planning</span></div>
+        <div class="trust-item"><strong>02</strong><span>Engineering & Design</span></div>
+        <div class="trust-item"><strong>03</strong><span>Construction Execution</span></div>
+        <div class="trust-item"><strong>04</strong><span>Turnkey Solutions</span></div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+      <div class="container about-grid">
+        <div class="about-image">
+          <img src="1000412068.jpg" alt="Construction project by Trinetra Constructs" loading="lazy">
+        </div>
+
+        <div class="about-copy">
+          <p class="eyebrow">About Trinetra Constructs</p>
+          <h2>Thoughtful Design.<br>Engineered Execution.</h2>
+          <span class="gold-line"></span>
+
+          <p>
+            At Trinetra Constructs, we bring architecture, engineering
+            and construction together to help clients build with clarity
+            and confidence.
+          </p>
+
+          <p>
+            From the initial planning stage to on-site execution and
+            finishing, our approach focuses on practical design,
+            coordinated work and attention to detail.
+          </p>
+
+          <p>
+            Whether you are planning a new home, a commercial space,
+            a renovation or a turnkey project, we aim to make the
+            construction journey organised and transparent.
+          </p>
+
+          <div class="founder-box">
+            <strong>Er. Hitesh Sharma</strong>
+            <span>Founder & Civil Engineer</span>
+          </div>
+
+          <a href="#contact" class="btn btn-dark-outline">Let's Build Together ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services" id="services">
+      <div class="container">
+        <div class="section-heading center">
+          <p class="eyebrow">What We Do</p>
+          <h2>Construction Solutions,<br>Built Around You.</h2>
+          <span class="gold-line"></span>
+          <p class="section-intro">
+            An integrated approach to design, engineering and construction
+            for residential and commercial projects.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-number">01</div>
+            <h3>Architecture & Planning</h3>
+            <p>Architectural layouts, space planning, elevation concepts and coordinated design solutions tailored to your site and requirements.</p>
+            <a href="#contact" class="service-link">Discuss Your Plan ↗</a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-number">02</div>
+            <h3>Structural Engineering</h3>
+            <p>Structural design coordination, engineering drawings and technical planning in accordance with applicable project requirements and standards.</p>
+            <a href="#contact" class="service-link">Discuss Requirements ↗</a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-number">03</div>
+            <h3>Residential Construction</h3>
+            <p>Construction services for homes, from foundations and structural work through masonry, finishing and other agreed project stages.</p>
+            <a href="#contact" class="service-link">Plan Your Home ↗</a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-number">04</div>
+            <h3>Commercial Construction</h3>
+            <p>Construction and execution solutions for commercial spaces, planned around functional requirements, site conditions and project scope.</p>
+            <a href="#contact" class="service-link">Discuss Your Project ↗</a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-number">05</div>
+            <h3>Turnkey Projects</h3>
+            <p>Coordinated project delivery covering agreed design, construction and finishing activities through a streamlined point of contact.</p>
+            <a href="#contact" class="service-link">Explore Turnkey ↗</a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-number">06</div>
+            <h3>Renovation & Finishing</h3>
+            <p>Upgrades, renovation and finishing solutions to improve the appearance, functionality and use of existing spaces.</p>
+            <a href="#contact" class="service-link">Upgrade Your Space ↗</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS -->
+    <section class="projects" id="projects">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Selected Work</p>
+          <h2>Built With Purpose.</h2>
+          <span class="gold-line"></span>
+          <p class="section-intro">
+            Explore project photographs that reflect our interest in
+            thoughtful planning, construction details and architectural presentation.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card">
+            <img src="1000412089.jpg" alt="Architectural construction project" loading="lazy">
+            <div class="project-overlay">
+              <span class="project-label">Architecture</span>
+              <h3>Residential Design</h3>
+              <p>Planning, proportions and contemporary form.</p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img src="1000412164.jpg" alt="Building construction and execution" loading="lazy">
+            <div class="project-overlay">
+              <span class="project-label">Execution</span>
+              <h3>Construction Works</h3>
+              <p>Turning design intent into built form.</p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img src="1000412191.jpg" alt="Construction project detail" loading="lazy">
+            <div class="project-overlay">
+              <span class="project-label">Project Details</span>
+              <h3>Quality in Every Stage</h3>
+              <p>Attention to detail from planning to finishing.</p>
+            </div>
+          </article>
+        </div>
+
+        <div style="text-align:center;margin-top:35px;">
+          <a href="#gallery" class="btn btn-dark-outline">View Project Gallery ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery" id="gallery">
+      <div class="container">
+        <div class="section-heading center">
+          <p class="eyebrow">Project Gallery</p>
+          <h2>A Closer Look at Our Work.</h2>
+          <span class="gold-line"></span>
+          <p class="section-intro">
+            Construction, architectural details and project photographs
+            from our visual portfolio.
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-item"><img src="1000412052.jpg" alt="Trinetra Constructs project photograph 1" loading="lazy"></div>
+          <div class="gallery-item"><img src="1000412068.jpg" alt="Trinetra Constructs project photograph 2" loading="lazy"></div>
+          <div class="gallery-item"><img src="1000412083.jpg" alt="Trinetra Constructs project photograph 3" loading="lazy"></div>
+          <div class="gallery-item"><img src="1000412089.jpg" alt="Trinetra Constructs project photograph 4" loading="lazy"></div>
+          <div class="gallery-item"><img src="1000412106.jpg" alt="Trinetra Constructs project photograph 5" loading="lazy"></div>
+          <div class="gallery-item"><img src="1000412139.jpg" alt="Trinetra Constructs project photograph 6" loading="lazy"></div>
+          <div class="gallery-item"><img src="1000412141.jpg" alt="Trinetra Constructs project photograph 7" loading="lazy"></div>
+          <div class="gallery-item"><img src="1000412164.jpg" alt="Trinetra Constructs project photograph 8" loading="lazy"></div>
+          <div class="gallery-item"><img src="1000412179.jpg" alt="Trinetra Constructs project photograph 9" loading="lazy"></div>
+          <div class="gallery-item"><img src="1000412191.jpg" alt="Trinetra Constructs project photograph 10" loading="lazy"></div>
+          <div class="gallery-item"><img src="1000412195.jpg" alt="Trinetra Constructs project photograph 11" loading="lazy"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR APPROACH -->
+    <section class="approach">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Our Approach</p>
+          <h2>From First Discussion<br>to Final Finish.</h2>
+          <span class="gold-line"></span>
+          <p class="section-intro">
+            A clear process helps clients understand the next step,
+            coordinate decisions and plan their construction project.
+          </p>
+        </div>
+
+        <div class="approach-grid">
+          <article class="approach-step">
+            <span class="step-number">STEP 01</span>
+            <h3>Understand</h3>
+            <p>Discuss your vision, requirements, site conditions and project priorities.</p>
+          </article>
+
+          <article class="approach-step">
+            <span class="step-number">STEP 02</span>
+            <h3>Plan</h3>
+            <p>Develop the agreed design, scope, specifications and project estimate.</p>
+          </article>
+
+          <article class="approach-step">
+            <span class="step-number">STEP 03</span>
+            <h3>Execute</h3>
+            <p>Coordinate the agreed construction activities and monitor work progress.</p>
+          </article>
+
+          <article class="approach-step">
+            <span class="step-number">STEP 04</span>
+            <h3>Deliver</h3>
+            <p>Complete the agreed scope and finishing activities with attention to detail.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="cta">
+      <div class="container">
+        <p class="eyebrow">Your Vision. Our Commitment.</p>
+        <h2>Planning to Build Something Exceptional?</h2>
+        <p>
+          Let's discuss your requirements and explore a suitable approach
+          for your residential or commercial construction project.
+        </p>
+
+        <div class="cta-actions">
+          <a href="#contact" class="btn btn-gold">Start a Conversation ↗</a>
+          <a href="https://wa.me/919419196691?text=Hello%20Trinetra%20Constructs%2C%20I%20would%20like%20to%20discuss%20a%20construction%20project."
+             target="_blank" rel="noopener noreferrer" class="btn btn-outline">WhatsApp Us ↗</a>
+        </div>
+      </div>
